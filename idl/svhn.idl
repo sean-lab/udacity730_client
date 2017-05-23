@@ -1,0 +1,13 @@
+struct SVHNQuery {
+  1: string filename,
+  2: binary image,
+}
+
+exception InvalidOperation {
+  1: string why
+}
+
+// Definition of SVHN recognition service
+service SVHN {  
+   string recognize(1:SVHNQuery query)
+}
